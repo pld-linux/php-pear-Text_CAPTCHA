@@ -7,12 +7,12 @@
 Summary:	%{_pearname} - generation of CAPTCHA imgaes
 Summary(pl):	%{_pearname} - generowanie obrazów CAPTCHA
 Name:		php-pear-%{_pearname}
-Version:	0.1.2
+Version:	0.1.4
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	c90b02434b4757e16b607649ed58d503
+# Source0-md5:	f11851aff5e152130825120a7aa0bb52
 URL:		http://pear.php.net/package/Text_CAPTCHA/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
