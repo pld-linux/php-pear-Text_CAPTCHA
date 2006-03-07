@@ -14,6 +14,7 @@ Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	78c7fca0516b0fbc57aa1e91b15e8f97
 URL:		http://pear.php.net/package/Text_CAPTCHA/
+BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-gd
 Requires:	php-pear
