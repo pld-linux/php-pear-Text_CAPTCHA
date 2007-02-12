@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - generation of CAPTCHA imgaes
-Summary(pl):	%{_pearname} - generowanie obraz體 CAPTCHA
+Summary(pl.UTF-8):   %{_pearname} - generowanie obraz贸w CAPTCHA
 Name:		php-pear-%{_pearname}
 Version:	0.2.0
 Release:	1
@@ -30,9 +30,9 @@ tell computers and humans apart) images.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-Implementacja obraz體 CAPTCHA (ca砶owicie zautomatyzowanego
-publicznego testu Turinga do odr罂nienia ludzi od komputer體).
+%description -l pl.UTF-8
+Implementacja obraz贸w CAPTCHA (ca艂kowicie zautomatyzowanego
+publicznego testu Turinga do odr贸偶nienia ludzi od komputer贸w).
 
 Ta klasa ma w PEAR status: %{_status}.
 
