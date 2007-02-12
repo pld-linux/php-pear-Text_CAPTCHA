@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - generation of CAPTCHA imgaes
-Summary(pl.UTF-8):   %{_pearname} - generowanie obrazów CAPTCHA
+Summary(pl.UTF-8):	%{_pearname} - generowanie obrazów CAPTCHA
 Name:		php-pear-%{_pearname}
 Version:	0.2.0
 Release:	1
