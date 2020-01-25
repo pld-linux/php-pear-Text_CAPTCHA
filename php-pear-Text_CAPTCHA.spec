@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.php
 %define		_status		alpha
 %define		_pearname	Text_CAPTCHA
 Summary:	%{_pearname} - generation of CAPTCHA imgaes
