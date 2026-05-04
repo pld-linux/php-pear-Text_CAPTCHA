@@ -4,12 +4,13 @@ Summary:	%{_pearname} - generation of CAPTCHA imgaes
 Summary(pl.UTF-8):	%{_pearname} - generowanie obrazów CAPTCHA
 Name:		php-pear-%{_pearname}
 Version:	1.0.2
-Release:	2
+Release:	3
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
+Source0:	https://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	3c30c8650436ea2e961c29e9eedf0066
-URL:		http://pear.php.net/package/
+Patch0:		%{name}-php8.patch
+URL:		https://pear.php.net/package/Text_CAPTCHA/
 BuildRequires:	php-pear-PEAR >= 1:1.4.0-0.b1
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.571
@@ -39,6 +40,9 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %pear_package_setup
+cd ./%{php_pear_dir}
+%patch -P0 -p1
+cd -
 
 %install
 rm -rf $RPM_BUILD_ROOT

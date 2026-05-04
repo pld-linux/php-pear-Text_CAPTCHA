@@ -1,0 +1,42 @@
+Replace removed create_function() (gone in PHP 8.0). Compute the result
+directly from the known operator format strings instead of evaluating the
+formatted equation string at runtime.
+
+--- Text_CAPTCHA-1.0.2.org/Text/CAPTCHA/Driver/Equation.php	2017-01-01 00:00:00.000000000 +0200
++++ Text_CAPTCHA-1.0.2/Text/CAPTCHA/Driver/Equation.php	2026-05-04 00:00:00.000000000 +0200
+@@ -188,7 +188,25 @@
+     {
+         $equation = sprintf($operator, $one, $two);
+
+-        $function = create_function('', 'return ' . $equation . ';');
++        switch ($operator) {
++            case '%s * %s':
++                $result = $one * $two;
++                break;
++            case '%s + %s':
++                $result = $one + $two;
++                break;
++            case '%s - %s':
++                $result = $one - $two;
++                break;
++            case 'min(%s, %s)':
++                $result = min($one, $two);
++                break;
++            case 'max(%s, %s)':
++                $result = max($one, $two);
++                break;
++            default:
++                $result = null;
++        }
+
+         if ($this->_numbersToText) {
+             $numberWords = new Numbers_Words();
+@@ -198,7 +216,7 @@
+                 $numberWords->toWords($two, $this->_locale)
+             );
+         }
+-        return array($equation, $function());
++        return array($equation, $result);
+     }
+
+     /**
